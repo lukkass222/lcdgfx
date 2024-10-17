@@ -29,6 +29,12 @@ LcdGfxButton::LcdGfxButton(const char *text, const NanoRect &rect)
     , m_rect(rect)
 {
 }
+// LcdGfxButton::LcdGfxButton(const NanoRect &rect): m_rect(rect){}
+
+void LcdGfxButton::setTitle(const char *text)
+{
+    m_text = text;
+}
 
 void LcdGfxButton::setFocus(bool focus)
 {
@@ -48,4 +54,9 @@ void LcdGfxButton::setRect(const NanoRect &rect)
 const NanoPoint LcdGfxButton::getSize()
 {
     return m_rect.size();
+}
+
+void LcdGfxButton::setTextAlignment_H(LcdGfxButtonFontAlignment Alin = TEXT_ALIGN_CENTER)
+{
+    m_alignment_h = Alin;
 }

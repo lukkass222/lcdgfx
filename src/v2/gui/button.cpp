@@ -55,3 +55,8 @@ const NanoPoint LcdGfxButton::getSize()
 {
     return m_rect.size();
 }
+
+void LcdGfxButton::setTextAlignment_H(LcdGfxButtonFontAlignment Alin = TEXT_ALIGN_CENTER)
+{
+    m_alignment_h = Alin;
+}

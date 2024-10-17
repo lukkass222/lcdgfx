@@ -113,6 +113,7 @@ public:
         return m_rect;
     }
 
+    void setTitle(const char *text);
     /**
      * Auto updates buttons size if it is not set
      */

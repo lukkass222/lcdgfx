@@ -49,3 +49,15 @@ void DisplayST7789_240x240x16_SPI::end()
     DisplayST7789_240x240x16::end();
     m_spi.end();
 }
+
+void DisplayST7789_240x320x16_SPI::begin()
+{
+    m_spi.begin();
+    DisplayST7789_240x320x16::begin();
+}
+
+void DisplayST7789_240x320x16_SPI::end()
+{
+    DisplayST7789_240x320x16::end();
+    m_spi.end();
+}

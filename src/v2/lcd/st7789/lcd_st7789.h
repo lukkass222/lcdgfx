@@ -416,6 +416,7 @@ public:
                 SPlatformSpiConfig{
                     config.busId, {config.cs}, config.dc, config.frequency ?: 40000000, config.scl, config.sda})
     {
+        this->getInterface().setOffset(0x0,0x0); //reset offset?
     }
 
     /**
@@ -451,6 +452,7 @@ public:
         : DisplayST7789_240x320x16<InterfaceST7789<I>>(m_spi, rstPin)
         , m_spi(*this, dcPin, data...)
     {
+         this->getInterface().setOffset(0x0,0x0); //reset offset?
     }
 
     /**
